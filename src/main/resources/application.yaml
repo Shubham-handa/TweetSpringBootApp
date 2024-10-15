@@ -1,0 +1,23 @@
+server:
+  port: 9093
+
+jwt:
+  secret: uKnowWhatIMeanJellyBean
+
+
+base:
+  url: /api/v1.0/tweets
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  data:
+    mongodb:
+      database: tweet_database
+      uri: mongodb+srv://deckuser:hDa6bHInNAhXuMIn@cluster0.c3rvz.mongodb.net/?retryWrites=true&w=majority
+  servlet:
+    multipart:
+      max-file-size: 256MB
+      max-request-size: 256MB
+      enabled: true
